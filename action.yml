@@ -1,0 +1,32 @@
+name: 'Build pdf from markdown with bibliography'
+description: 'Build pdf from markdown with bibliography'
+author: 'flat35hd99'
+
+branding:
+  icon: 'terminal'
+  color: blue
+
+inputs:
+  markdown:
+    description: 'Your markdown file to convert to pdf'
+    required: true
+  bibliography:
+    description: 'Your bibliography'
+    required: true
+  csl:
+    description: 'Choose csl file in github.com/citation-style-language/styles. Don't write postfix .csl'
+    required: false
+    default: 'nature'
+  output:
+    description: 'Output pdf file path'
+    required: false
+    default: 'main.pdf'
+
+runs:
+  using: 'docker'
+  image: Dockerfile.action
+  args:
+    - ${{ inputs.markdown }}
+    - ${{ inputs.bibliography }}
+    - ${{ inputs.csl }}
+    - ${{ inputs.output }}
