@@ -1,10 +1,10 @@
-name: 'alskdjfhqiweuylkjaxclkasrqkjasdf'
+name: 'Build pdf from makrdown with bibliography'
 description: 'Build pdf from markdown with bibliography'
 author: 'flat35hd99'
 
 branding:
   icon: 'terminal'
-  color: blue
+  color: 'blue'
 
 inputs:
   markdown:
@@ -14,7 +14,7 @@ inputs:
     description: 'Your bibliography'
     required: true
   csl:
-    description: 'Choose csl file in github.com/citation-style-language/styles. Don't write postfix .csl'
+    description: "Choose csl file in github.com/citation-style-language/styles. Don't write postfix .csl"
     required: false
     default: 'nature'
   output:
