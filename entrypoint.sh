@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/bash
 
 input_markdown_file=$1
 input_bibliography=$2
